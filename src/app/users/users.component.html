@@ -1,0 +1,16 @@
+<h2>Users in the system</h2>
+<ul class="users">
+  <li *ngFor='let user of users' (click)="onSelect(user)">
+    <p>first name: {{user.firstName}}</p>
+    <p>last name: {{user.lastName}}</p>
+    <p>user ID: {{user.userId}}</p>
+    <p>gender: {{user.gender | lowercase}}</p>
+  </li>
+  <div *ngIf="selectedUser">
+    <h2>{{selectedUser.firstName}} details</h2>
+    <div>
+      <label>gender: </label>
+      <input [(ngModel)]="selectedUser.gender" placeholder="gender">
+    </div>
+  </div>
+</ul>
