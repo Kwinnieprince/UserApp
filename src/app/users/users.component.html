@@ -4,13 +4,14 @@
     <p>first name: {{user.firstName}}</p>
     <p>last name: {{user.lastName}}</p>
     <p>user ID: {{user.userId}}</p>
-    <p>gender: {{user.gender | lowercase}}</p>
+    <p>status: {{user.status | lowercase}}</p>
   </li>
   <div *ngIf="selectedUser">
     <h2>{{selectedUser.firstName}} details</h2>
     <div>
-      <label>gender: </label>
-      <input [(ngModel)]="selectedUser.gender" placeholder="gender">
+      <label>status: </label>
+      <input [(ngModel)]="selectedUser.status" placeholder="status">
+      <button (click)="setStatus()">submit</button>
     </div>
   </div>
 </ul>

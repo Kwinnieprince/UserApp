@@ -62,4 +62,8 @@ export class UsersComponent implements OnInit {
     this.getUsers();
   }
 
+  setStatus() {
+    this.userService.updateStatus(this.selectedUser);
+  }
+
 }
